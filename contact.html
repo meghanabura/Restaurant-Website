@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exquisite Eats</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        /* Add any specific styles for the contact page here if needed */
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        #map { /* Style for the map container */
+            height: 400px; /* Adjust map height as needed */
+            width: 100%;
+        }
+
+        /* Responsive styles for the map */
+        @media (max-width: 768px) {
+            #map {
+                height: 300px; /* Adjust height for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Exquisite Eats</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="book-now">Book Now</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-us">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+
+                <div class="contact-info">
+                    <p><strong>Address:</strong> 123 Main Street, India</p>
+                    <p><strong>Phone:</strong> 23456789</p>
+                    <p><strong>Email:</strong> info@exquisiteeats.com</p>
+                    <p><strong>Hours:</strong> Monday-Saturday: 11:00 AM - 10:00 PM, Sunday: Closed</p>
+                </div>
+
+                <div id="map">
+                    <iframe src=" " width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <div class="container">
+           
+</body>
+</html>

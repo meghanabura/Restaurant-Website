@@ -1,0 +1,384 @@
+/* style.css */
+
+/* General Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #eee; /* Light text for dark background */
+    background-color: #000; /* Black background */
+    overflow-x: hidden;
+}
+
+a { /* General link style for better visibility on black */
+    color: #d4af37; /* Gold color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #c09525; /* Darker gold on hover */
+}
+
+/* Header and Navigation */
+header {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    color: #d4af37; /* Gold logo */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+
+.book-now {
+    background-color: #d4af37;
+    color: #000; /* Black text on gold button */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.book-now:hover {
+    background-color: #c09525;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 150px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #d4af37;
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #c09525;
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Other sections */
+
+.about-us, .menu-highlights, .testimonials {
+    padding: 60px 0;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #eee; /* Light color */
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow */
+    transition: transform 0.2s;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly darker menu item background */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #eee;
+}
+
+.menu-item p {
+    padding: 0 15px 15px;
+    margin: 0;
+    color: #ccc;
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: rgba(255, 255, 255, 0.05); /* Very transparent white */
+}
+
+
+.testimonial {
+    padding: 30px;
+    text-align: center;
+    font-style: italic;
+    color: #ddd;
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  padding: 20px 0;
+  text-align: center;
+  color: #eee;
+}
+
+
+/* ... (previous CSS code) ... */
+
+/* Responsive Styles (Media Queries) */
+
+/* Mobile-first approach - start with the smallest screen and scale up */
+
+/* Small screens (typically mobile phones) */
+@media (max-width: 767px) {
+  nav {
+      flex-direction: column; /* Stack navigation vertically */
+      align-items: flex-start; /* Align items to the left */
+  }
+
+  .logo {
+      margin-bottom: 10px; /* Add some space below logo */
+  }
+
+  nav ul {
+      display: none; /* Hide menu initially */
+      flex-direction: column; /* Stack menu items vertically */
+      width: 100%; /* Full width menu */
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+      text-align: center; /* Center text in menu */
+      position: absolute;
+      top: 80px; /* Adjust as needed */
+      left: 0;
+  }
+
+  nav li {
+      margin: 10px 0; /* Vertical spacing for menu items */
+  }
+
+  nav a {
+      display: block; /* Make links fill the width */
+      padding: 10px; /* Add some padding to links */
+  }
+
+  .burger-menu {
+      display: block; /* Show burger menu */
+      cursor: pointer;
+      margin-top: 10px; /* Add some space above the menu */
+  }
+
+  .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 0;
+      transition: 0.3s;
+  }
+
+  nav.active ul {
+      display: flex; /* Show menu when burger is clicked */
+  }
+
+  nav.active .burger-menu .bar:nth-child(2) {
+    opacity: 0;
+  }
+  nav.active .burger-menu .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  nav.active .burger-menu .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .hero h1 {
+      font-size: 2.5em; /* Smaller heading */
+      margin-bottom: 20px;
+  }
+
+  .hero p {
+      font-size: 1.2em; /* Smaller paragraph */
+      margin-bottom: 30px;
+  }
+
+  .hero {
+      padding: 100px 0; /* Adjust hero padding */
+  }
+
+  .menu-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Two columns on smaller screens */
+      gap: 20px;
+  }
+  .menu-item img {
+      height: 200px; /* Adjust image height */
+  }
+
+  .section-title {
+      font-size: 2em;
+  }
+
+  .btn {
+      font-size: 1em;
+      padding: 12px 25px;
+  }
+}
+
+/* Medium screens (tablets and larger mobile devices) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Three columns on medium screens */
+  }
+}
+
+/* Large screens (desktops and larger) - No significant changes needed here as the base styles are already optimized for larger screens */
+@media (min-width: 992px) {
+  /* You can add specific styles for large screens if needed */
+}
+
+/* style.css */
+
+/* ... (other CSS styles) ... */
+
+body {
+  /* ... other styles ... */
+  background-image: url('image1.jpg'); /* Main background image */
+  background-size: cover; /* or contain, auto, etc. */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-attachment: fixed; /* Optional: Keep background fixed on scroll */
+}
+
+header {
+  /* ... other styles ... */
+  background-image: url('image1.jpg'); /* Header background */
+  background-size: cover;
+  /* ... */
+}
+
+.about-us {
+  /* ... other styles ... */
+  background-image: url('image4.jpg'); /* About Us section background */
+  background-size: cover; /* Or contain, 100% 100%, etc. */
+  background-repeat: no-repeat;
+  /* If you want a semi-transparent overlay on the image for text readability */
+  position: relative; /* Needed for pseudo-element positioning */
+}
+
+.about-us::before { /* Overlay */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);  /* Adjust opacity as needed */
+}
+
+.about-us .container { /* Ensure content is above the overlay */
+  position: relative; /* Bring the content forward */
+  z-index: 1;
+}
+
+
+
+.menu-highlights {
+  /* ... other styles ... */
+  background-image: url('image6.jpg'); /* Menu section background */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.testimonials {
+  /* ... other styles ... */
+  background-image: url('image2.jpg'); /* Testimonial section background */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* ... (Rest of your CSS) */
